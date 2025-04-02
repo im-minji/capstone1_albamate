@@ -1,18 +1,19 @@
 import 'package:albamate_sample/screen/group_BottomNavigationBar.dart';
 import 'package:flutter/material.dart';
-import 'package:albamate_sample/screen/notice/createNoticePage.dart';
 import 'package:albamate_sample/screen/notice/nav_notice.dart';
+import 'package:albamate_sample/screen/notice/createSubPage.dart';
 
-class ScreenNoticePage extends StatefulWidget {
+
+class ScreenSubPage extends StatefulWidget {
   @override
-  _ScreenNoticePage createState() => _ScreenNoticePage();
+  _ScreenSubPage createState() => _ScreenSubPage();
 }
 
-class _ScreenNoticePage extends State<ScreenNoticePage> {
+class _ScreenSubPage extends State<ScreenSubPage> {
   void _navigateToCreatePage() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => CreateNoticePage()),
+      MaterialPageRoute(builder: (context) => CreateSubPage()),
     );
   }
 
@@ -22,7 +23,7 @@ class _ScreenNoticePage extends State<ScreenNoticePage> {
       body: Column(
         children: [
           Expanded(child: NoticePageNav()),
-          Spacer(),// NoticePageNav 추가
+          // NoticePageNav 추가
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: ElevatedButton(
@@ -41,7 +42,8 @@ class _ScreenNoticePage extends State<ScreenNoticePage> {
             ),
           ),
         ],
-      )
+      ),
+
     );
   }
 }

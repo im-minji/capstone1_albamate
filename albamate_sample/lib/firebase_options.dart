@@ -27,6 +27,8 @@ class DefaultFirebaseOptions {
         return android;
       case TargetPlatform.iOS:
         return ios;
+      case TargetPlatform.windows:
+        return windows;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -54,6 +56,7 @@ class DefaultFirebaseOptions {
     appId: '1:167852024232:android:a6dfde8c59d01d9e7efd9d',
     messagingSenderId: '167852024232',
     projectId: 'albamate-capstone-01',
+    databaseURL: 'https://albamate-capstone-01-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'albamate-capstone-01.firebasestorage.app',
   );
 
@@ -62,7 +65,19 @@ class DefaultFirebaseOptions {
     appId: '1:167852024232:ios:e02afdd9f2f1257e7efd9d',
     messagingSenderId: '167852024232',
     projectId: 'albamate-capstone-01',
+    databaseURL: 'https://albamate-capstone-01-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'albamate-capstone-01.firebasestorage.app',
     iosBundleId: 'com.example.albamateSample',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+  apiKey: 'AIzaSyDuXiZf4-2-klcKa336-QAadcvM5nl-_rY',
+  appId: '1:167852024232:web:65861f3e9c4d897f7efd9d', 
+  messagingSenderId: '167852024232',
+  projectId: 'albamate-capstone-01',
+  databaseURL: 'https://albamate-capstone-01-default-rtdb.asia-southeast1.firebasedatabase.app',
+  storageBucket: 'albamate-capstone-01.appspot.com',
+  );
+
+
 }
